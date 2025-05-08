@@ -215,6 +215,8 @@ Briefly explain architecture choices, trade‑offs, and how you used AI assistan
 ### Trade-offs:
 - Used GORM for simplicity, but raw SQL could optimize complex queries.
 
+thank you for the consideration
+
 
 
 ---
