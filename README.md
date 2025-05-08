@@ -12,6 +12,8 @@ This project processes invoices to generate periodic financial insight reports u
 ## Quick Start (TODO)
 Provide commands to spin up the stack from scratch.
 1. fill up all the .env.example by creating the .env equivalent in their respective directories
+  - .env.example in ./worker
+  - .env.example in ./
 2. Spin up the stack using Docker Compose:
 ```bash
 docker-compose up --build
