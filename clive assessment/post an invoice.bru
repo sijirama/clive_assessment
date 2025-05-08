@@ -1,0 +1,40 @@
+meta {
+  name: post an invoice
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/api
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "vendor": "Siji Corporation",
+    "amount": 1250.75,
+    "dueDate": "2025-06-15",
+    "fileName": "invoice_acme_may2025.pdf",
+    "rawInvoice": {
+      "invoiceNumber": "INV-2025-0423",
+      "lineItems": [
+        {
+          "description": "Web Development Services",
+          "quantity": 40,
+          "unitPrice": 25.00,
+          "total": 1000.00
+        },
+        {
+          "description": "Server Maintenance",
+          "quantity": 5,
+          "unitPrice": 50.15,
+          "total": 250.75
+        }
+      ],
+      "taxRate": 0,
+      "notes": "Payment due within 30 days"
+    },
+    "isPaid": false
+  }
+}

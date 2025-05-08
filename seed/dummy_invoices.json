@@ -1,0 +1,11 @@
+[
+  {
+    "vendor": "Sample Vendor",
+    "amount": 10000,
+    "due_date": "2025-05-31",
+    "file_name": "INV-SAMPLE",
+    "raw_invoice": {
+      "example": true
+    }
+  }
+]

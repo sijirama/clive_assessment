@@ -1,0 +1,24 @@
+
+version: "3.9"
+services:
+  postgres:
+    image: postgres:15
+    ports: ["5432:5432"]
+    environment:
+      POSTGRES_DB: insight
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+  mongo:
+    image: mongo:7
+    ports: ["27017:27017"]
+  api:
+    build: ./api 
+    env_file: ".env"
+    depends_on: [postgres, mongo]
+    ports: ["3000:3000"]
+  worker:
+    build: ./worker
+    env_file: ".env"
+    ports: ["8080:8080"]
+    depends_on: [postgres, mongo]
+    command: ["/app/main"]

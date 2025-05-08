@@ -1,0 +1,8 @@
+
+image: node:20
+pipelines:
+  default:
+    - step:
+        name: TODO
+        script:
+          - echo "fill this pipeline"

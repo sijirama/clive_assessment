@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "clive assessment",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

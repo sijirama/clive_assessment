@@ -1,0 +1,11 @@
+meta {
+  name: get lates invoice report
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:8080/insights/latest
+  body: json
+  auth: none
+}
