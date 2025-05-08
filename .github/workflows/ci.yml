@@ -13,6 +13,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+
+      - name: Run Go tests
+        working-directory: ./worker
+        run: go test ./... -v
+
       - name: Build Go app Docker image
         working-directory: ./worker
         run: docker build -t insight-worker:latest .
