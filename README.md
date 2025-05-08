@@ -125,7 +125,7 @@ Response:
 - 400 Bad Request: Invalid input.
 - 500 Internal Server Error: Database error.
 
-### GET /invoices/:id
+### GET 3000/invoices/:id
 Description: Retrieves an invoice by its ID.
 Parameters:
 id: UUID of the invoice (e.g., 123e4567-e89b-12d3-a456-426614174000).
