@@ -54,7 +54,7 @@ func main() {
 		c.AddFunc("@hourly", SummariseAndSave)
 	} else {
 		// Create cron schedule (e.g., "*/60 * * * * *" for every 60 seconds)
-		cronSpec := fmt.Sprintf("*/%d * * * * *", seconds/3)
+		cronSpec := fmt.Sprintf("*/%d * * * * *", seconds)
 		_, err = c.AddFunc(cronSpec, SummariseAndSave)
 		if err != nil {
 			// Handle invalid cron spec
